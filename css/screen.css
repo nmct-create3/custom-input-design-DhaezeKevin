@@ -715,6 +715,7 @@ input::placeholder {
     Custom checkboxes & radio buttons
 */
 
+
 /* Hide the actual input with the class .o-hide-accessible */
 
 /* checked state */
@@ -731,7 +732,62 @@ input::placeholder {
         Do magic stuff here, for example:
         fill: blue;
     */
+    opacity: 1;
+    transition: opacity 0.2s ease-out;
 }
+
+
+.c-custom-input-option{
+    display: flex;
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--color-neutral-xxx-light);
+    margin-right: 8px;
+    box-shadow: var(--inset-shadow);
+    align-items: center;
+    justify-content: center;
+}
+.c-custom-input-option:hover{
+    border-width: 2px;
+}
+.c-custom-input-option:focus, .c-custom-input-option:active{
+    box-shadow: 0 0 2px 2px var(--color-alpha);
+}
+
+    .c-custom-input-option__symbol{
+        opacity: 0;
+        display: block;
+        transition: opacity 0.2s ease-in;
+    }
+
+.c-custom-input-option-label{
+    display: flex;
+    margin: 5px 0;
+}
+
+.c-custom-input-option--radio{
+    border-radius: 100%;
+}
+
+.c-custom-input-option--checkbox{
+    border-radius: var(--radius);
+}
+
+.c-custom-input-option--checkbox .c-custom-input-option__symbol {
+    /* Stuff for the checkbox icon... */
+    height: 10px;
+    width: 10px;
+    fill: var(--color-alpha)
+}
+  
+.c-custom-input-option--radio .c-custom-input-option__symbol {
+    /* Stuff for the radio button icon... */
+    height: 6px;
+    width: 6px;
+    background-color: var(--color-alpha);
+    border-radius: 100%;
+}
+
 
 /*------------------------------------*\
 #UTILITIES
